@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wealth — Graphic Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef0f4;--surface:#fff;--ink:#15181e;--mute:#5d6572;--line:#d9dde4;--accent:#2f4bff;--on-accent:#fff;
+--ff-d:'Bricolage Grotesque',system-ui,sans-serif;--ff-b:'Figtree',system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101216;--surface:#181b21;--ink:#eceef2;--mute:#9aa2af;--line:#2a2f38}}
+:root[data-theme="dark"]{--bg:#101216;--surface:#181b21;--ink:#eceef2;--mute:#9aa2af;--line:#2a2f38}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--ff-b);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0}
+nav b{font:800 20px var(--ff-d)}
+nav a{text-decoration:none;font-weight:500;margin-left:24px;color:var(--mute)}
+nav a:hover{color:var(--ink)}
+.hero{padding:56px 0 72px}
+h1{font:800 clamp(48px,10vw,118px)/.94 var(--ff-d);letter-spacing:-.04em;margin:0 0 28px}
+h1 span{color:var(--accent)}
+.lede{max-width:34em;font-size:clamp(18px,2.2vw,22px);color:var(--mute);margin:0 0 32px}
+.btn{display:inline-block;background:var(--accent);color:var(--on-accent);padding:14px 24px;border-radius:12px;font-weight:600;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line);margin-left:8px}
+h2{font:700 clamp(28px,4vw,40px)/1.1 var(--ff-d);letter-spacing:-.02em;margin:0 0 32px}
+section{padding:56px 0;border-top:1px solid var(--line)}
+.work{display:grid;grid-template-columns:repeat(6,1fr);gap:24px}
+.item{grid-column:span 2}
+.item.wide{grid-column:span 3}
+.ph{width:100%;border:2px dashed color-mix(in srgb,var(--ink) 30%,transparent);border-radius:16px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:600;font-size:15px;color:var(--mute);background:var(--surface);padding:12px}
+.sq{aspect-ratio:1/1}.pt{aspect-ratio:4/5}.ls{aspect-ratio:16/10}
+.item h3{font:700 19px var(--ff-d);margin:14px 0 2px}
+.item p{margin:0;color:var(--mute);font-size:15.5px}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.svc div{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px}
+.svc h3{font:700 19px var(--ff-d);margin:0 0 6px}
+.svc p{margin:0;color:var(--mute);font-size:16px}
+.contact a.big{font:800 clamp(24px,5.4vw,56px)/1.05 var(--ff-d);letter-spacing:-.03em;text-decoration:none;display:inline-block;border-bottom:4px solid var(--accent);word-break:break-all}
+.phone{display:block;margin-top:20px;font-weight:600;font-size:20px;text-decoration:none}
+.cf{max-width:560px;display:grid;gap:16px}
+.cf label{display:block;font-weight:600;font-size:15px;margin-bottom:6px}
+.cf input,.cf textarea{width:100%;padding:13px 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font:inherit}
+.cf textarea{min-height:140px;resize:vertical}
+.cf input:focus,.cf textarea:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 25%,transparent)}
+.cf button{border:0;font:inherit;cursor:pointer;justify-self:start}
+#cmsg{margin:0;color:var(--mute);font-size:15px}
+.alt{margin-top:28px;color:var(--mute)}
+.alt a{text-decoration:none;font-weight:600;color:var(--ink)}
+.cat{margin-bottom:56px}.cat:last-child{margin-bottom:0}
+.cat h3{font:700 24px var(--ff-d);margin:0 0 2px}.cat>p{margin:0 0 18px;color:var(--mute)}
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.g{padding:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--surface);cursor:zoom-in;display:block}
+.g img{width:100%;height:auto;display:block}
+#lb{border:0;padding:0;background:transparent;max-width:94vw;max-height:94vh}
+#lb::backdrop{background:rgba(0,0,0,.85)}
+#lb img{max-width:94vw;max-height:90vh;display:block;border-radius:12px}
+@media (max-width:560px){.gal{grid-template-columns:1fr}}
+footer{padding:32px 0 48px;color:var(--mute);font-size:15px}
+@media (max-width:760px){.item,.item.wide{grid-column:span 6}.svc{grid-template-columns:1fr}nav a{margin-left:16px}.btn.ghost{margin:10px 0 0}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><b>Wealth</b><div><a href="#work">Work</a><a href="#services">Services</a><a href="#contact">Contact</a></div></nav>
+
+<header class="hero">
+<h1>Graphics that keep a brand <span>consistent.</span></h1>
+<p class="lede">I’m Wealth, a graphic designer. I turn creative direction into clean, on-brand visuals for social, email, print, events and editorial, and I deliver on deadline.</p>
+<a class="btn" href="#work">See the work</a><a class="btn ghost" href="#contact">Get in touch</a>
+</header>
+
+<section id="work">
+<h2>Selected work</h2>
+<div class="cat"><h3>Brand identity</h3><p>Logo, colour and type system.</p><div class="gal">
+<button type="button" class="g"><img src="images/Brand%20identity/1.png" alt="Brand identity design 1" loading="lazy"></button>
+<button type="button" class="g"><img src="images/Brand%20identity/2.png" alt="Brand identity design 2" loading="lazy"></button>
+<button type="button" class="g"><img src="images/Brand%20identity/3.png" alt="Brand identity design 3" loading="lazy"></button>
+<button type="button" class="g"><img src="images/Brand%20identity/4.png" alt="Brand identity design 4" loading="lazy"></button>
+</div></div>
+<div class="cat"><h3>Marketing campaign</h3><p>One idea across every channel.</p><div class="gal">
+<button type="button" class="g"><img src="images/Marketing%20campaign/1.png" alt="Marketing campaign design 1" loading="lazy"></button>
+<button type="button" class="g"><img src="images/Marketing%20campaign/2.png" alt="Marketing campaign design 2" loading="lazy"></button>
+<button type="button" class="g"><img src="images/Marketing%20campaign/3.png" alt="Marketing campaign design 3" loading="lazy"></button>
+<button type="button" class="g"><img src="images/Marketing%20campaign/4.png" alt="Marketing campaign design 4" loading="lazy"></button>
+</div></div>
+<div class="cat"><h3>Email newsletter</h3><p>Header and layout.</p><div class="gal">
+<button type="button" class="g"><img src="images/Email%20newsletter/1.png" alt="Email newsletter design 1" loading="lazy"></button>
+<button type="button" class="g"><img src="images/Email%20newsletter/2.png" alt="Email newsletter design 2" loading="lazy"></button>
+<button type="button" class="g"><img src="images/Email%20newsletter/3.png" alt="Email newsletter design 3" loading="lazy"></button>
+<button type="button" class="g"><img src="images/Email%20newsletter/4.png" alt="Email newsletter design 4" loading="lazy"></button>
+</div></div>
+<div class="cat"><h3>Flyer and poster</h3><p>Print-ready event pieces.</p><div class="gal">
+<button type="button" class="g"><img src="images/Flyer%20and%20poster/1.png" alt="Flyer and poster design 1" loading="lazy"></button>
+<button type="button" class="g"><img src="images/Flyer%20and%20poster/2.png" alt="Flyer and poster design 2" loading="lazy"></button>
+<button type="button" class="g"><img src="images/Flyer%20and%20poster/3.png" alt="Flyer and poster design 3" loading="lazy"></button>
+<button type="button" class="g"><img src="images/Flyer%20and%20poster/4.png" alt="Flyer and poster design 4" loading="lazy"></button>
+</div></div>
+<div class="cat"><h3>Workshop collateral</h3><p>Slides, handouts, signage.</p><div class="gal">
+<button type="button" class="g"><img src="images/Workshop%20collateral/1.png" alt="Workshop collateral design 1" loading="lazy"></button>
+<button type="button" class="g"><img src="images/Workshop%20collateral/2.png" alt="Workshop collateral design 2" loading="lazy"></button>
+<button type="button" class="g"><img src="images/Workshop%20collateral/3.png" alt="Workshop collateral design 3" loading="lazy"></button>
+<button type="button" class="g"><img src="images/Workshop%20collateral/4.png" alt="Workshop collateral design 4" loading="lazy"></button>
+</div></div>
+<div class="cat"><h3>Editorial</h3><p>Magazine and publication layouts.</p><div class="gal">
+<button type="button" class="g"><img src="images/Editorial/1.png" alt="Editorial design 1" loading="lazy"></button>
+<button type="button" class="g"><img src="images/Editorial/2.png" alt="Editorial design 2" loading="lazy"></button>
+<button type="button" class="g"><img src="images/Editorial/3.png" alt="Editorial design 3" loading="lazy"></button>
+<button type="button" class="g"><img src="images/Editorial/4.png" alt="Editorial design 4" loading="lazy"></button>
+</div></div>
+</section>
+
+<section id="services">
+<h2>What I design</h2>
+<div class="svc">
+<div><h3>Social media</h3><p>Posts, carousels, stories and covers that look like one brand.</p></div>
+<div><h3>Email and campaigns</h3><p>Newsletters and campaign assets for print and digital.</p></div>
+<div><h3>Events and workshops</h3><p>Flyers, banners, slides and take-home materials.</p></div>
+<div><h3>Editorial and publishing</h3><p>Layouts for articles, guides, ebooks and brand publications.</p></div>
+<div><h3>Brand consistency</h3><p>I work from your guidelines and design system, and flag gaps early.</p></div>
+<div><h3>Organized files</h3><p>Clear naming, tidy folders and ready-to-use exports.</p></div>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Need a designer?</h2>
+<form class="cf" id="cf">
+<div><label for="cn">Your name</label><input id="cn" type="text" autocomplete="name" required></div>
+<div><label for="ce">Your email</label><input id="ce" type="email" autocomplete="email" required></div>
+<div><label for="cm">Project details</label><textarea id="cm" required placeholder="What do you need designed, and by when?"></textarea></div>
+<button class="btn" type="submit">Send message</button>
+<p id="cmsg" role="status"></p>
+</form>
+<p class="alt">Or reach me directly: <a href="mailto:fubarawealth06@gmail.com">fubarawealth06@gmail.com</a> · <a href="tel:+2348148449539">08148449539</a></p>
+</section>
+<footer>© 2026 Wealth. Graphic designer.</footer>
+</div>
+<dialog id="lb"><img alt=""></dialog>
+<script>
+(function(){var d=document.getElementById("lb"),i=d.querySelector("img");
+document.querySelectorAll(".g").forEach(function(b){b.addEventListener("click",function(){var s=b.querySelector("img");i.src=s.src;i.alt=s.alt;d.showModal();});});
+d.addEventListener("click",function(){d.close();});})();
+</script>
+<script>
+document.getElementById('cf').addEventListener('submit',function(e){
+e.preventDefault();
+var n=document.getElementById('cn').value.trim(),m=document.getElementById('ce').value.trim(),t=document.getElementById('cm').value.trim();
+var s='Design enquiry from '+n;
+var b=t+'\n\nFrom: '+n+'\nEmail: '+m;
+document.getElementById('cmsg').textContent='Opening your email app. Press send there to deliver your message.';
+window.location.href='mailto:fubarawealth06@gmail.com?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b);
+});
+</script>
+</body>
+</html>
